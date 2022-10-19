@@ -1,5 +1,5 @@
 Package: carutools
-Title: What the Package Does (One Line, Title Case)
+Title: R Tools for Church Army's Research Unit
 Version: 0.0.0.9000
 Authors@R: 
     person("Dave", "Lovell", , "davidpg.lovell@gmail.com", role = "aut",
