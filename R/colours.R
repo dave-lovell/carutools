@@ -8,5 +8,5 @@ ca_grey <- function(k = c("85", "65", "45", "25", "15", "10", "5")){
   k = match.arg(k)
   k.index <- which(c("85", "65", "45", "25", "15", "10", "5") == k)
 
-  grey <- carutools::ct_greys()[k.index]
+  grey <- ca_greys()[k.index]
 }
