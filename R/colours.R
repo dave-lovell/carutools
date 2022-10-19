@@ -9,4 +9,6 @@ ca_grey <- function(k = c("85", "65", "45", "25", "15", "10", "5")){
   k.index <- which(c("85", "65", "45", "25", "15", "10", "5") == k)
 
   grey <- ca_greys()[k.index]
+
+  grey
 }
