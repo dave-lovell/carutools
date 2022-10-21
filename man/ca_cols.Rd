@@ -9,6 +9,7 @@
 \alias{ca_green}
 \alias{ca_maroon}
 \alias{ca_cyan}
+\alias{ca_light_teal}
 \alias{ca_dark_teal}
 \alias{ca_brown}
 \title{Church Army Colours}
@@ -28,6 +29,8 @@ ca_green()
 ca_maroon()
 
 ca_cyan()
+
+ca_light_teal()
 
 ca_dark_teal()
 
