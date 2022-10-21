@@ -18,9 +18,6 @@ ca_pallete <- function(pallette){
         return(out_col)
         }))}
 
-## PRIMARY #########################################################################################
-
-### Black  ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 #' Church Army Colours
 #'
@@ -36,9 +33,6 @@ ca_black <- function() "#000000"
 #' @rdname ca_cols
 #' @export
 ca_white <- function() "#FFFFFF"
-
-## SECONDARY ###### ################################################################################
-
 #' @rdname ca_cols
 #' @export
 ca_orange <- function() "#E84619"
