@@ -42,9 +42,9 @@ ca_dark_teal  <- function() "#006272"
 #' @export
 ca_brown      <- function() "#6F2C3F"
 
-## PALETTES #########################################################################################
+## PALETTES ####################################################################
 
-# Pallettes proper ---------------------------------------------------------------------------------
+# Pallettes proper -------------------------------------------------------------
 oranges      <- c("#E84619", "#ED6B47", "#F19074", "#F6B6A4", "#FADAD1")
 golds        <- c("#FBC900", "#FCD446", "#FCDF74", "#FDE9A1", "#FEF4D0")
 light_teals  <- c("#6C8B93", "#8AA2A9", "#A6B9BF", "#C4D1D3", "#E2E9E9")
@@ -55,8 +55,7 @@ purples      <- c("#523178", "#765B94", "#9784AE", "#BBAEC9", "#DCD6E4")
 browns       <- c("#652430", "#85515A", "#A37C83", "#C1A7AD", "#E1D4D7")
 greens       <- c("#2AB04A", "#5EB66D", "#84C491", "#ACD6B5", "#D5E9D9")
 
-
-
+# Palet functions --------------------------------------------------------------
 #' Church Army Colour Pallets
 #'
 #' These functions each return a colour pallet from hurch Army's brand
