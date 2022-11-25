@@ -21,7 +21,7 @@ make_caru_ggpalette <- function(pal_name){
 }
 
 
-ca_scale_fill_discrete <- function(ca_pallette = "orange", ...){
+ca_scale_fill_discrete <- function(ca_pallette = "mix", ...){
   ggplot2::scale_fill_discrete(type = ca_pal(ca_pallette), ...)
   }
 
