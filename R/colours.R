@@ -44,23 +44,6 @@ ca_brown      <- function() "#6F2C3F"
 
 ## PALETTES #########################################################################################
 
-## Behind the scenes helper -------------------------------------------------------------------------
-
-ca_pallete <- function(pallette){
-
-  if(is.function(palette)) palette <- palette()
-
-  rlang::new_function(
-    args = rlang::pairlist2(x = 1),
-    body =
-      quote({
-        n_pal <- length(palette)
-        stopifnot(all(x <= n_pal), all(x > 0))
-
-        out_col <- palette[x]
-        return(out_col)
-      }))}
-# --------------------------------------------------------------------------------------------------
 # Pallettes proper ---------------------------------------------------------------------------------
 oranges      <- c("#E84619", "#ED6B47", "#F19074", "#F6B6A4", "#FADAD1")
 golds        <- c("#FBC900", "#FCD446", "#FCDF74", "#FDE9A1", "#FEF4D0")
