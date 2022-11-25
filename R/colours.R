@@ -19,9 +19,6 @@ ca_white <- function() "#FFFFFF"
 ca_orange <- function() "#E84619"
 #' @rdname ca_cols
 #' @export
-ca_lime   <- function() "#E1DE00"
-#' @rdname ca_cols
-#' @export
 ca_gold   <- function() "#FBC900"
 #' @rdname ca_cols
 #' @export
@@ -103,10 +100,31 @@ ca_pal_brown      <- function() return(browns)
 ca_pal_green      <- function() return(greens)
 
 ## Get ca_pal_* by name
+#' See all Church Army palette names
+#'
+#' A character vector of pallette names accepted by `carutools` functions. For instance,
+#' \link[carutools]{ca_pal} will only accept a name from these characters as its output.
+#'
+#' @returns A character vector of eight Church Army pallette names
+#' @export
 ca_sample_pals    <- function(){
   c("orange", "gold", "light-teal", "cyan", "dark-teal", "purple", "brown", "green")
 }
 
+#' Get a church army palette by name
+#'
+#' This function returns a Church Army palette specified by the user
+#'
+#' Depending on which of the names in `get_pal()` is passed to `which_pal`,
+#' the hexcodes of one of Church Army's colour palettes is returned
+#'
+#' `which_pal` must exactly match one of `get_pal()`, otherwise an error is thrown.
+#'
+#' @returns
+#' A character vector of length 5
+#'
+#' @param which_pal A character, which must be one of \link[carutools]{ca_sample_pals}.
+#' @export
 ca_pal <- function(which_pal = NULL){
 
   stopifnot(length(which_pal) == 1)
