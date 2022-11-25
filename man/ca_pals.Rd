@@ -38,5 +38,5 @@ These functions each return a colour pallet from Church Army's brand
 }
 \details{
 These functions are wrappers around character vectors of length five.
-They take no arguments and always return the same charcter vector.
+They take no arguments and always return the same character vector.
 }
