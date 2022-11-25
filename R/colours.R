@@ -65,7 +65,6 @@ greens       <- c("#2AB04A", "#5EB66D", "#84C491", "#ACD6B5", "#D5E9D9")
 #'
 #' @returns
 #' A single character vector of length five.
-#'
 #' @rdname ca_pals
 #' @export
 ca_pal_orange     <- function() return(oranges)
