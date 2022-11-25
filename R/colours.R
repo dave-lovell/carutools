@@ -99,16 +99,26 @@ ca_pal_brown      <- function() return(browns)
 #' @export
 ca_pal_green      <- function() return(greens)
 
+#' @rdname ca_pals
+#' @export
+ca_pal_mix <- function(){
+  out <-
+    c(ca_gold(), ca_cyan(), ca_green(), ca_purple(),
+    ca_light_teal(), ca_orange(), ca_brown(),
+    ca_dark_teal(), ca_maroon())
+  return(out)
+}
+
 ## Get ca_pal_* by name
 #' See all Church Army palette names
 #'
 #' A character vector of pallette names accepted by `carutools` functions. For instance,
 #' \link[carutools]{ca_pal} will only accept a name from these characters as its output.
 #'
-#' @returns A character vector of eight Church Army pallette names
+#' @returns A character vector of nine Church Army pallette names
 #' @export
 ca_sample_pals    <- function(){
-  c("orange", "gold", "light-teal", "cyan", "dark-teal", "purple", "brown", "green")
+  c("mix", "orange", "gold", "light-teal", "cyan", "dark-teal", "purple", "brown", "green")
 }
 
 #' Get a church army palette by name
@@ -137,6 +147,7 @@ ca_pal <- function(which_pal = NULL){
 
 get_pal <- function(which_pal){
   pals <- c(
+    "mix"        = ca_pal_mix,
     "orange"     = ca_pal_orange,
     "gold"       = ca_pal_gold,
     "light-teal" = ca_pal_light_teal,
