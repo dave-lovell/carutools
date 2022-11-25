@@ -62,7 +62,6 @@ ca_pallete <- function(pallette){
       }))}
 # --------------------------------------------------------------------------------------------------
 # Pallettes proper ---------------------------------------------------------------------------------
-
 oranges      <- c("#E84619", "#ED6B47", "#F19074", "#F6B6A4", "#FADAD1")
 golds        <- c("#FBC900", "#FCD446", "#FCDF74", "#FDE9A1", "#FEF4D0")
 light_teals  <- c("#6C8B93", "#8AA2A9", "#A6B9BF", "#C4D1D3", "#E2E9E9")
@@ -72,4 +71,52 @@ maroons      <- c("#9A054A", "#AE396F", "#C26A93", "#D89CBB", "#EBCED8")
 purples      <- c("#523178", "#765B94", "#9784AE", "#BBAEC9", "#DCD6E4")
 browns       <- c("#652430", "#85515A", "#A37C83", "#C1A7AD", "#E1D4D7")
 greens       <- c("#2AB04A", "#5EB66D", "#84C491", "#ACD6B5", "#D5E9D9")
+
+
+
+#' Church Army Colour Pallets
+#'
+#' These functions each return a colour pallet from hurch Army's brand
+#'
+#' These functions are wrappers around character vectors of length five.
+#' They take no arguments and always return the same charcter vector.
+#'
+#' @returns
+#' A single character vector of length five.
+#'
+#' @rdname ca_pals
+#' @export
+ca_pal_orange     <- function() return(oranges)
+
+#' @rdname ca_pals
+#' @export
+ca_pal_gold       <- function() return(golds)
+
+#' @rdname ca_pals
+#' @export
+ca_pal_light_teal <- function() return(light_teals)
+
+#' @rdname ca_pals
+#' @export
+ca_pal_cyan       <- function() return(cyans)
+
+#' @rdname ca_pals
+#' @export
+ca_pal_dark_teal  <- function() return(dark_teals)
+
+#' @rdname ca_pals
+#' @export
+ca_pal_maroon     <- function() return(maroons)
+
+#' @rdname ca_pals
+#' @export
+ca_pal_purple     <- function() return(purples)
+
+#' @rdname ca_pals
+#' @export
+ca_pal_brown      <- function() return(browns)
+
+#' @rdname ca_pals
+#' @export
+ca_pal_green      <- function() return(green)
 
