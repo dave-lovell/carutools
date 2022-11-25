@@ -58,7 +58,7 @@ greens       <- c("#2AB04A", "#5EB66D", "#84C491", "#ACD6B5", "#D5E9D9")
 # Palet functions --------------------------------------------------------------
 #' Church Army Colour Pallets
 #'
-#' These functions each return a colour pallet from hurch Army's brand
+#' These functions each return a colour pallet from Church Army's brand
 #'
 #' These functions are wrappers around character vectors of length five.
 #' They take no arguments and always return the same charcter vector.
