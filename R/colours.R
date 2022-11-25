@@ -31,6 +31,9 @@ ca_maroon <- function() "#910048"
 ca_cyan   <- function() "#0092BC"
 #' @rdname ca_cols
 #' @export
+ca_purple <- function() "#523178"
+#' @rdname ca_cols
+#' @export
 ca_light_teal <- function() "#6C8B93"
 #' @rdname ca_cols
 #' @export
