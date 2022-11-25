@@ -56,6 +56,7 @@ browns       <- c("#652430", "#85515A", "#A37C83", "#C1A7AD", "#E1D4D7")
 greens       <- c("#2AB04A", "#5EB66D", "#84C491", "#ACD6B5", "#D5E9D9")
 
 # Palet functions --------------------------------------------------------------
+
 #' Church Army Colour Pallets
 #'
 #' These functions each return a colour pallet from Church Army's brand
@@ -99,5 +100,36 @@ ca_pal_brown      <- function() return(browns)
 
 #' @rdname ca_pals
 #' @export
-ca_pal_green      <- function() return(green)
+ca_pal_green      <- function() return(greens)
+
+## Get ca_pal_* by name
+ca_sample_pals    <- function(){
+  c("orange", "gold", "light-teal", "cyan", "dark-teal", "purple", "brown", "green")
+}
+
+ca_pal <- function(which_pal = NULL){
+
+  stopifnot(length(which_pal) == 1)
+
+  if(is.null(which_pal) | !which_pal %in% ca_sample_pals()){
+    rlang::abort("You must specify a pallet name. See ca_sample_pals() for all valid paletts")
+  }
+  get_pal(as.character(which_pal))
+}
+
+get_pal <- function(which_pal){
+  pals <- c(
+    "orange"     = ca_pal_orange,
+    "gold"       = ca_pal_gold,
+    "light-teal" = ca_pal_light_teal,
+    "cyan"       = ca_pal_cyan,
+    "dark-teal"  = ca_pal_dark_teal,
+    "purple"     = ca_pal_purple,
+    "brown"      = ca_pal_brown,
+    "green"      = ca_pal_green
+    )
+  out_pal <- (pals[[which_pal]])()
+  return(out_pal)
+}
+
 
