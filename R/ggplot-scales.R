@@ -19,12 +19,12 @@
 #' @rdname ca_scale_colour_discrete
 ca_scale_colour_discrete <- function(ca_palette = "mix", ...){
   if(length(ca_palette) == 1) ggplot2::scale_colour_discrete(type = ca_pal(ca_palette), ...)
-  else                        ggplot2::scale_colour_discrete(values = ca_col(ca_palette))
+  else                        ggplot2::scale_colour_discrete(values = ca_cols(ca_palette))
 }
 
 #'@export
 #'@rdname ca_scale_colour_discrete
 ca_scale_fill_discrete <- function(ca_palette = "mix", ...){
   if(length(ca_palette) == 1) ggplot2::scale_fill_discrete(type = ca_pal(ca_palette), ...)
-  else                        ggplot2::scale_fill_discrete(values = ca_col(ca_palette))
+  else                        ggplot2::scale_fill_discrete(values = ca_cols(ca_palette))
 }
