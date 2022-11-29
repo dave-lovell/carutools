@@ -12,6 +12,7 @@
 \alias{ca_light_teal}
 \alias{ca_dark_teal}
 \alias{ca_brown}
+\alias{ca_cols}
 \title{Church Army Colours}
 \usage{
 ca_black()
@@ -35,6 +36,8 @@ ca_light_teal()
 ca_dark_teal()
 
 ca_brown()
+
+ca_cols(x)
 }
 \value{
 A single character vector of length one.

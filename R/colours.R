@@ -42,6 +42,32 @@ ca_dark_teal  <- function() "#006272"
 #' @export
 ca_brown      <- function() "#6F2C3F"
 
+colours <- c(
+  black      <- ca_black(),
+  white      <- ca_white(),
+  orange     <- ca_orange(),
+  gold       <- ca_gold(),
+  green      <- ca_green(),
+  maroon     <- ca_maroon(),
+  cyan       <- ca_cyan(),
+  purple     <- ca_purple(),
+  light_teal <- ca_light_teal(),
+  dark_teal  <- ca_dark_teal(),
+  brown      <- ca_brown()
+)
+
+get_cols <- function(x) colours[x]
+
+#' Get a church army colours by name
+#' @export
+ca_cols <- function(x){
+  stopifnot(all(x %in% names(colours)))
+
+  out <- get_cols(x)
+
+  return(out)
+}
+
 ## PALETTES ####################################################################
 
 # Pallettes proper -------------------------------------------------------------
