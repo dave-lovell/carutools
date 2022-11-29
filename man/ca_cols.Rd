@@ -4,11 +4,11 @@
 \alias{ca_black}
 \alias{ca_white}
 \alias{ca_orange}
-\alias{ca_lime}
 \alias{ca_gold}
 \alias{ca_green}
 \alias{ca_maroon}
 \alias{ca_cyan}
+\alias{ca_purple}
 \alias{ca_light_teal}
 \alias{ca_dark_teal}
 \alias{ca_brown}
@@ -20,8 +20,6 @@ ca_white()
 
 ca_orange()
 
-ca_lime()
-
 ca_gold()
 
 ca_green()
@@ -29,6 +27,8 @@ ca_green()
 ca_maroon()
 
 ca_cyan()
+
+ca_purple()
 
 ca_light_teal()
 

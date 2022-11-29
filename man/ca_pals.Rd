@@ -10,6 +10,7 @@
 \alias{ca_pal_purple}
 \alias{ca_pal_brown}
 \alias{ca_pal_green}
+\alias{ca_pal_mix}
 \title{Church Army Colour Pallets}
 \usage{
 ca_pal_orange()
@@ -29,6 +30,8 @@ ca_pal_purple()
 ca_pal_brown()
 
 ca_pal_green()
+
+ca_pal_mix()
 }
 \value{
 A single character vector of length five.
