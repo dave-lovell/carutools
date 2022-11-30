@@ -82,8 +82,6 @@ ca_col <- function(x){
   ca_cols(x)
 }
 
-#' Get a single church army colour by name
-
 ## PALETTES ####################################################################
 
 # Pallettes proper -------------------------------------------------------------
