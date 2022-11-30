@@ -43,22 +43,25 @@ ca_dark_teal  <- function() "#006272"
 ca_brown      <- function() "#6F2C3F"
 
 colours <- c(
-  black      <- ca_black(),
-  white      <- ca_white(),
-  orange     <- ca_orange(),
-  gold       <- ca_gold(),
-  green      <- ca_green(),
-  maroon     <- ca_maroon(),
-  cyan       <- ca_cyan(),
-  purple     <- ca_purple(),
-  light_teal <- ca_light_teal(),
-  dark_teal  <- ca_dark_teal(),
-  brown      <- ca_brown()
+  black      = ca_black(),
+  white      = ca_white(),
+  orange     = ca_orange(),
+  gold       = ca_gold(),
+  green      = ca_green(),
+  maroon     = ca_maroon(),
+  cyan       = ca_cyan(),
+  purple     = ca_purple(),
+  light_teal = ca_light_teal(),
+  dark_teal  = ca_dark_teal(),
+  brown      = ca_brown()
 )
 
 get_cols <- function(x) colours[x]
 
 #' Get a church army colours by name
+#'
+#' @param x A character vector. Values must all be in \link[carutools]{ca_sample_cols}
+#' @returns A character vector
 #' @export
 ca_cols <- function(x){
   stopifnot(all(x %in% names(colours)))
@@ -67,6 +70,19 @@ ca_cols <- function(x){
 
   return(out)
 }
+
+#' Get a single church army colour by name
+#'
+#' A wrapper around \linkg[carutools]{ca_cols} that strictly accepts one name and returns one colour
+#'
+#' @param x A character. Value must be one of \link[carutools]{ca_sample_cols}
+#' @export
+ca_col <- function(x){
+  stopifnot(length(x) == 1)
+  ca_cols(x)
+}
+
+#' Get a single church army colour by name
 
 ## PALETTES ####################################################################
 
@@ -139,16 +155,21 @@ ca_pal_mix <- function(){
 }
 
 ## Get ca_pal_* by name
-#' See all Church Army palette names
+
+#' See all Church Army palette and colour names
 #'
-#' A character vector of pallette names accepted by `carutools` functions. For instance,
-#' \link[carutools]{ca_pal} will only accept a name from these characters as its output.
+#' A character vector of colour or pallette names accepted by `carutools` functions. For instance,
+#' \link[carutools]{ca_pal} will only accept a name from `ca_sample_pals()`.
 #'
-#' @returns A character vector of nine Church Army pallette names
+#' @returns A character vector of Church Army palette or colour names
 #' @export
 ca_sample_pals    <- function(){
   c("mix", "orange", "gold", "light-teal", "cyan", "dark-teal", "purple", "brown", "green")
 }
+
+#'@export
+#'@rdname ca_sample_pals
+ca_sample_cols <- function() return(names(colours))
 
 #' Get a church army palette by name
 #'

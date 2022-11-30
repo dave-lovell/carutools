@@ -2,14 +2,17 @@
 % Please edit documentation in R/colours.R
 \name{ca_sample_pals}
 \alias{ca_sample_pals}
-\title{See all Church Army palette names}
+\alias{ca_sample_cols}
+\title{See all Church Army palette and colour names}
 \usage{
 ca_sample_pals()
+
+ca_sample_cols()
 }
 \value{
-A character vector of nine Church Army pallette names
+A character vector of Church Army palette or colour names
 }
 \description{
-A character vector of pallette names accepted by \code{carutools} functions. For instance,
-\link[carutools]{ca_pal} will only accept a name from these characters as its output.
+A character vector of colour or pallette names accepted by \code{carutools} functions. For instance,
+\link[carutools]{ca_pal} will only accept a name from \code{ca_sample_pals()}.
 }

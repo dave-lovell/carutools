@@ -15,9 +15,6 @@ Otherwise, every value must be one of \link[carutools]{ca_cols}}
 
 \item{...}{Other arguments passed to \link[ggplot2]{scale_colour_discrete}/\link[ggplot2]{scale_fill_discrete}}
 }
-\value{
-A single character vector of length one.
-}
 \description{
 Add Church Army colour/fill scales to ggplot objects
 }

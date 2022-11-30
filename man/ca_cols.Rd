@@ -39,8 +39,13 @@ ca_brown()
 
 ca_cols(x)
 }
+\arguments{
+\item{x}{A character vector. Values must all be in \link[carutools]{ca_sample_cols}}
+}
 \value{
 A single character vector of length one.
+
+A character vector
 }
 \description{
 These functions each return the hexadecimal code pertaining to a colour in Church Army's brand
