@@ -60,7 +60,7 @@ get_cols <- function(x) colours[x]
 
 fix_col_name <- function(x){
   stringr::str_replace(x, "_", "-") |>
-    str_replace("[:space:]", "-")
+    stringr::str_replace("[:space:]", "-")
 }
 
 #' Get a church army colours by name
