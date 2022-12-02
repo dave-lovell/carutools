@@ -1,3 +1,5 @@
+## DISCRETE SCALES #################################################################
+
 #' Discrete colour/fill scales for ggplot2
 #'
 #' Add Church Army colour/fill scales to ggplot objects
@@ -27,6 +29,81 @@ ca_scale_fill_discrete <- function(ca_palette = "mix", ...){
   else                        ggplot2::scale_fill_discrete(values = ca_cols(ca_palette))
 }
 
+
+## Discrete, diverging scales
+
+make_likert_scale <- function(low, high, mid = NULL, n){
+
+  colours <- vector("character", n)
+
+  even_n <- n %% 2 == 0
+  mid_n  <- median(1:n)
+
+  lower_n <- 1:floor(mid_n)
+  upper_n <- ceiling(mid_n):n
+
+  colours[lower_n] <- low[lower_n]
+  colours[rev(upper_n)] <- high[lower_n]
+
+
+  if(!even_n){
+    if(is.null(mid)){
+      getter <- grDevices::colorRampPalette(
+        c(
+          colours[max(lower_n)],
+          colours[min(upper_n)]
+          ))
+      colours[mid_n] <- (getter(3))[2] #mix those colours
+    } else colours[mid_n] <- mid
+  }
+
+  return(colours)
+
+}
+
+#' Church Army Discrete colour/fill Scales, brewed from palettes
+#'
+#' Discrete, diverging scales with a white midpoint, useful for plotting likert responses
+#'
+#' These are wrappers around \link[ggplot2]{scale_colour_discrete}/\link[ggplot2]{scale_fill_discrete}.
+#' 'Low' and 'High' arguments are passed to \link[carutools]{ca_pal} to get official Church Army
+#' palettes, from which values are extracted to be used in the discrete scale.
+#'
+#' By default, odd scales have a `ca_white()` mid-point, which is convenient for plotting likert responses.
+#' Specifying `mid = NULL` replaced this with an automatically mixed colour, which often produces
+#' an attractive diverging scale. With the exception of this mixed colour, all colours in the scale
+#' will be official CA brand colours
+#'
+#' @param low The CA palette to be used for the lower half of the scale. Must be one of `ca_show_pal()`.
+#' @param high The CA palette to be used for the upper half of the scale. Must be one of `ca_show_pal()`.
+#' @param mid The colour to use for the mid-point of the scale. Must be a colour that ggplot can understand.
+#' If this is null, a new colour is calculated by blending the mid-points of low and high scales.
+#' @rdname ca_scale_fill_brew
+#' @export
+ca_scale_fill_brew <- function(low = "cyan", high = "green", mid = ca_white(), ...){
+
+  stopifnot(is.null(mid)|length(mid) == 1)
+
+  low <- ca_pal(low)
+  high <- ca_pal(high)
+
+  list_out <- lapply(as.list(1:11), make_likert_scale, low = low, high = high, mid = mid)
+
+  ggplot2::scale_fill_discrete(type = list_out, ...)
+}
+
+#' @rdname ca_scale_fill_brew
+#' @export
+ca_scale_colour_brew <- function(low = "cyan", high = "green", mid = ca_white(), ...){
+
+  low <- ca_pal(low)
+  high <- ca_pal(high)
+
+  list_out <- lapply(as.list(1:11), make_likert_scale, low = low, high = high, mid = mid)
+
+  ggplot2::scale_colour_discrete(type = list_out, ...)
+}
+## CONTINUOUS SCALES ##############################################################
 
 #' Continuous colour/fill scales for ggplot2
 #'
@@ -106,3 +183,5 @@ ca_scale_fill_gradient2 <- function(low = "cyan", high = "green", mid = "white",
 
   ggplot2::scale_fill_gradient2(low = low, mid = mid, high = high, ...)
 }
+
+
