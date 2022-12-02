@@ -58,12 +58,18 @@ colours <- c(
 
 get_cols <- function(x) colours[x]
 
+fix_col_name <- function(x){
+  stringr::str_replace(x, "_", "-") |>
+    str_replace("[:space:]", "-")
+}
+
 #' Get a church army colours by name
 #'
 #' @param x A character vector. Values must all be in \link[carutools]{ca_sample_cols}
 #' @returns A character vector
 #' @export
 ca_cols <- function(x){
+  x <- fix_col_name(x)
   stopifnot(all(x %in% names(colours)))
 
   out <- get_cols(x)
@@ -186,6 +192,8 @@ ca_sample_cols <- function() return(names(colours))
 ca_pal <- function(which_pal = NULL){
 
   stopifnot(length(which_pal) == 1)
+
+  which_pal <- fix_col_name(which_pal)
 
   if(is.null(which_pal) | !which_pal %in% ca_sample_pals()){
     rlang::abort("You must specify a pallet name. See ca_sample_pals() for all valid paletts")
