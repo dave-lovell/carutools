@@ -79,7 +79,7 @@ ca_cols <- function(x){
 
 #' Get a single church army colour by name
 #'
-#' A wrapper around \link"[carutools]{ca_cols} that strictly accepts one name and returns one colour
+#' A wrapper around \link[carutools]{ca_cols} that strictly accepts one name and returns one colour
 #'
 #' @param x A character. Value must be one of \link[carutools]{ca_sample_cols}
 #' @export
