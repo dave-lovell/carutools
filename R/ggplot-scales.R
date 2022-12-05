@@ -70,7 +70,7 @@ make_likert_scale <- function(low, high, mid = NULL, n){
 #' palettes, from which values are extracted to be used in the discrete scale.
 #'
 #' By default, odd scales have a `ca_white()` mid-point, which is convenient for plotting likert responses.
-#' Specifying `mid = NULL` replaced this with an automatically mixed colour, which often produces
+#' Specifying `mid = NULL` replaces this with an automatically mixed colour, which often produces
 #' an attractive diverging scale. With the exception of this mixed colour, all colours in the scale
 #' will be official CA brand colours
 #'
