@@ -26,7 +26,7 @@ These are wrappers around \link[ggplot2]{scale_colour_discrete}/\link[ggplot2]{s
 palettes, from which values are extracted to be used in the discrete scale.
 
 By default, odd scales have a \code{ca_white()} mid-point, which is convenient for plotting likert responses.
-Specifying \code{mid = NULL} replaced this with an automatically mixed colour, which often produces
+Specifying \code{mid = NULL} replaces this with an automatically mixed colour, which often produces
 an attractive diverging scale. With the exception of this mixed colour, all colours in the scale
 will be official CA brand colours
 }
